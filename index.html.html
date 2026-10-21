@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CIPRO - PMO Knowledge Directory</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <header class="hero">
+    <span class="badge">REPOSITORIO GENERAL</span>
+    <h1>PMO Knowledge Directory</h1>
+    <p>Accede a guías, plantillas, exámenes y documentos estandarizados de gestión de proyectos y agilidad.</p>
+    
+    <!-- Buscador Global -->
+    <div class="search-container">
+      <i data-lucide="search"></i>
+      <input type="text" id="globalSearch" placeholder="Buscar por nombre (ej. Acta de constitución, Scrum, Riesgos...)" onkeyup="buscarDocumento()">
+    </div>
+  </header>
+
+  <main class="directory-container">
+
+    <!-- SECCIÓN 1: METODOLOGÍAS ÁGILES -->
+    <details class="accordion-main" open>
+      <summary class="accordion-title">
+        <i data-lucide="zap" class="icon"></i>
+        <span>METODOLOGÍAS ÁGILES</span>
+        <span class="count">3 Subcategorías</span>
+      </summary>
+      
+      <div class="accordion-content">
+
+        <!-- SUBACORDEÓN: SCRUM -->
+        <details class="accordion-sub">
+          <summary><i data-lucide="folder"></i> SCRUM</summary>
+          <div class="resource-list">
+            <div class="resource-item">
+              <span>Resumen SCRUM Manager</span>
+              <div class="actions">
+                <button class="btn-preview" onclick="abrirModal('./docs/metodologias/resumen-scrum.pdf', 'Resumen SCRUM')"><i data-lucide="eye"></i> Ver</button>
+                <a href="./docs/metodologias/resumen-scrum.pdf" download class="btn-download"><i data-lucide="download"></i> Descargar</a>
+              </div>
+            </div>
+            <div class="resource-item">
+              <span>Guía Oficial de Scrum (Scrum Guide)</span>
+              <div class="actions">
+                <button class="btn-preview" onclick="abrirModal('./docs/metodologias/scrum-guide.pdf', 'Scrum Guide')"><i data-lucide="eye"></i> Ver</button>
+                <a href="./docs/metodologias/scrum-guide.pdf" download class="btn-download"><i data-lucide="download"></i> Descargar</a>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- SUBACORDEÓN: AGILE MINDSET & LEAN -->
+        <details class="accordion-sub">
+          <summary><i data-lucide="folder"></i> AGILE MINDSET & LEAN</summary>
+          <div class="resource-list">
+            <div class="resource-item">
+              <span>Agile Inception Canvas</span>
+              <div class="actions">
+                <a href="./docs/metodologias/agile-inception.pdf" download class="btn-download"><i data-lucide="download"></i> Descargar</a>
+              </div>
+            </div>
+            <div class="resource-item">
+              <span>Lean Kanban Essencial</span>
+              <div class="actions">
+                <a href="./docs/metodologias/lean-kanban.pdf" download class="btn-download"><i data-lucide="download"></i> Descargar</a>
+              </div>
+            </div>
+            <div class="resource-item">
+              <span>OKRs Canvas</span>
+              <div class="actions">
+                <a href="./docs/metodologias/okr-canvas.pdf" download class="btn-download"><i data-lucide="download"></i> Descargar</a>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- SUBACORDEÓN: DESIGN THINKING -->
+        <details class="accordion-sub">
+          <summary><i data-lucide="folder"></i> DESIGN THINKING</summary>
+          <div class="resource-list">
+            <div class="resource-item">
+              <span>Guía Completa Design Thinking</span>
+              <div class="actions">
+                <a href="./docs/metodologias/design-thinking.pdf" download class="btn-download"><i data-lucide="download"></i> Descargar</a>
+              </div>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+
+    <!-- SECCIÓN 2: PMO SETUP & PMBOK -->
+    <details class="accordion-main">
+      <summary class="accordion-title">
+        <i data-lucide="folder-kanban" class="icon"></i>
+        <span>PMO SETUP & PMBOK</span>
+        <span class="count">3 Subcategorías</span>
+      </summary>
+      
+      <div class="accordion-content">
+
+        <!-- SUBACORDEÓN: FORMATOS ENTREGABLES -->
+        <details class="accordion-sub">
+          <summary><i data-lucide="files"></i> Formatos Entregables</summary>
+          <div class="resource-list">
+            <div class="resource-item">
+              <span>Acta de Constitución del Proyecto (Charter)</span>
+              <div class="actions">
+                <button class="btn-preview" onclick="abrirModal('./docs/pmo/acta-constitucion.pdf', 'Acta de Constitución')"><i data-lucide="eye"></i> Ver</button>
+                <a href="./docs/pmo/acta-constitucion.pdf" download class="btn-download"><i data-lucide="download"></i> Descargar</a>
+              </div>
+            </div>
+            <div class="resource-item">
+              <span>Estructura de Desglose de Trabajo (EDT / WBS)</span>
+              <div class="actions">
+                <a href="./docs/pmo/edt-template.pdf" download class="btn-download"><i data-lucide="download"></i> Descargar</a>
+              </div>
+            </div>
+            <div class="resource-item">
+              <span>Matriz de Gestión de Riesgos</span>
+              <div class="actions">
+                <a href="./docs/pmo/matriz-riesgos.pdf" download class="btn-download"><i data-lucide="download"></i> Descargar</a>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- SUBACORDEÓN: EXÁMENES Y BANCO DE PREGUNTAS -->
+        <details class="accordion-sub">
+          <summary><i data-lucide="award"></i> Exámenes de Práctica</summary>
+          <div class="resource-list">
+            <div class="resource-item">
+              <span>Examen Simulación PMBOK - Módulo 1</span>
+              <div class="actions">
+                <a href="./docs/examenes/examen-1.pdf" download class="btn-download"><i data-lucide="download"></i> Descargar</a>
+              </div>
+            </div>
+            <div class="resource-item">
+              <span>Examen Simulación PMBOK - Módulo 2</span>
+              <div class="actions">
+                <a href="./docs/examenes/examen-2.pdf" download class="btn-download"><i data-lucide="download"></i> Descargar</a>
+              </div>
+            </div>
+          </div>
+        </details>
+
+        <!-- SUBACORDEÓN: MAPAS CONCEPTUALES -->
+        <details class="accordion-sub">
+          <summary><i data-lucide="network"></i> Mapas Conceptuales</summary>
+          <div class="resource-list">
+            <div class="resource-item">
+              <span>Mapa Conceptual: Áreas de Conocimiento PMBOK</span>
+              <div class="actions">
+                <button class="btn-preview" onclick="abrirModal('./docs/mapas/mapa-pmbok.pdf', 'Mapa PMBOK')"><i data-lucide="eye"></i> Ver</button>
+                <a href="./docs/mapas/mapa-pmbok.pdf" download class="btn-download"><i data-lucide="download"></i> Descargar</a>
+              </div>
+            </div>
+          </div>
+        </details>
+
+      </div>
+    </details>
+
+  </main>
+
+  <!-- Modal Visor Integrado -->
+  <div id="pdfModal" class="modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modalTitle">Documento</h3>
+        <button onclick="cerrarModal()"><i data-lucide="x"></i></button>
+      </div>
+      <iframe id="pdfFrame" src=""></iframe>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>lucide.createIcons();</script>
+</body>
+</html>
