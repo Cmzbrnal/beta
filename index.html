@@ -17,7 +17,7 @@
     <!-- Buscador Global -->
     <div class="search-container">
       <i data-lucide="search"></i>
-      <input type="text" id="globalSearch" placeholder="Buscar por nombre (ej. Acta de constitución, Scrum, Riesgos...)" onkeyup="buscarDocumento()">
+      <input type="text" id="globalSearch" placeholder="Buscar por nombre (ej. PMBOK, Scrum, Riesgos...)" onkeyup="buscarDocumento()">
     </div>
   </header>
 
@@ -106,10 +106,23 @@
       
       <div class="accordion-content">
 
-        <!-- SUBACORDEÓN: FORMATOS ENTREGABLES -->
-        <details class="accordion-sub">
-          <summary><i data-lucide="files"></i> Formatos Entregables</summary>
+        <!-- SUBACORDEÓN: FORMATOS Y RESÚMENES PMBOK -->
+        <details class="accordion-sub" open>
+          <summary><i data-lucide="files"></i> Formatos y Resúmenes PMBOK</summary>
           <div class="resource-list">
+            <!-- ARCHIVO INTEGRADO DESDE TU CARPETA DOCS -->
+            <div class="resource-item">
+              <span>Resumen PMBOK</span>
+              <div class="actions">
+                <button class="btn-preview" onclick="abrirModal('./docs/Resumen PMBOK.docx.pdf', 'Resumen PMBOK')">
+                  <i data-lucide="eye"></i> Ver
+                </button>
+                <a href="./docs/Resumen PMBOK.docx.pdf" download class="btn-download">
+                  <i data-lucide="download"></i> Descargar
+                </a>
+              </div>
+            </div>
+
             <div class="resource-item">
               <span>Acta de Constitución del Proyecto (Charter)</span>
               <div class="actions">
